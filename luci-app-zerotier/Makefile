@@ -8,7 +8,7 @@ PKG_MAINTAINER:=The LuCI Team <luci@lists.subsignal.org>
 PKG_LICENSE:=Apache-2.0
 
 LUCI_TITLE:=LuCI Support for ZeroTier
-LUCI_DEPENDS:=+zerotier
+LUCI_DEPENDS:=+@PACKAGE_zerotier
 LUCI_PKGARCH:=all
 
 include $(TOPDIR)/feeds/luci/luci.mk
@@ -21,7 +21,7 @@ define Package/$(PKG_NAME)
   SUBMENU:=3. Applications
   TITLE:=ZeroTier LuCI Interface
   PKGARCH:=all
-  DEPENDS:=+luci-base +zerotier
+  DEPENDS:=+luci-base +@PACKAGE_zerotier
 endef
 
 define Package/$(PKG_NAME)/description
@@ -29,4 +29,3 @@ define Package/$(PKG_NAME)/description
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
-
