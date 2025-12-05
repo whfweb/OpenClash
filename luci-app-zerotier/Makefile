@@ -13,7 +13,7 @@ LUCI_PKGARCH:=all
 
 include $(TOPDIR)/feeds/luci/luci.mk
 
-## call BuildPackage - OpenWrt buildroot signature
+# call BuildPackage - OpenWrt buildroot signature
 
 define Package/$(PKG_NAME)
   SECTION:=luci
